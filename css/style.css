@@ -1,15 +1,17 @@
 body{
     background-color: #f0f2f7;
+    margin-bottom: 500px;
+    font-family:'Roboto', sans-serif !important;
 }
 
 header{
-  height: 500px;
+  height: 300px;
 }
 .transparent{
     background-color: transparent;
     color: #fff;
     font-weight: bold;
-    font-family: "Open Sans";
+    font-family:'Roboto', sans-serif;
     text-transform: uppercase;
 }
 
@@ -19,7 +21,7 @@ header{
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
 }
 
 .intro-header .site-heading {
@@ -58,6 +60,42 @@ a{
 
 #contato{
     background-color: #73358b;
+    color: #fff;
+}
+
+#contato h1{
+    font-weight: bold;
+    font-family: "Open Sans";
+    text-align: center;
+}
+
+#cadastro{
+    margin-top:-200px;
+    margin-bottom:200px;
+}
+
+#cadastro-box{
+    font-family:'Roboto', sans-serif;
+    right:50px;
+    position: fixed;
+    background-color: #512772;
+    color: #fff;
+    width: 250px;
+    height: 330px;
+    z-index: 999;
+    padding: 10px 10px 10px 10px;
+}
+
+#cadastro-box p {
+    font-weight: bold;
+}
+#cadastro-box span {
+    font-size: 10px;
+}
+
+#cadastro-box .submit {
+    background-color: #6afac5;
+    color: #512772;
 }
 
 .meio{
