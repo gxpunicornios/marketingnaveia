@@ -1,9 +1,10 @@
 body{
     background-color: #f0f2f7;
+    margin-bottom: 500px;
 }
 
 header{
-  height: 500px;
+  height: 300px;
 }
 .transparent{
     background-color: transparent;
@@ -19,7 +20,7 @@ header{
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
 }
 
 .intro-header .site-heading {
@@ -59,5 +60,23 @@ a{
 
 #contato{
     background-color: #73358b;
+    color: #fff;
+}
+
+#contato h1{
+    font-weight: bold;
+    font-family: "Open Sans";
+    text-align: center;
+}
+
+#cadastro{
+    margin-top:-100px;
+}
+.affix-top{
+    position: relative;
+}
+
+.affix{
+    position: fixed;
 }
 
