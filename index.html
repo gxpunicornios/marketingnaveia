@@ -12,14 +12,11 @@
   <!-- Bootstrap Core CSS -->
   <link href="lib/css/bootstrap.min.css" rel="stylesheet">
   <link href="lib/css/bootstrap-theme.min.css" rel="stylesheet">
-  <script src="../../Downloads/jquery-3.2.1.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 
 </head>
 <body>
-
-
-
   <!-- Page Header -->
   <!-- Set your background image for this header on the line below. -->
   <header class="intro-header" style="background-image: url('img/banner-lo2.jpg')">
@@ -47,12 +44,29 @@
         <div class="col col-md-4"></div>
         <div class="col col-md-4"></div>
         <div class="col col-md-4">
-          <div class="panel panel-primary affix-top" data-spy="affix">
-            <div class="panel-heading">
-              <h3 class="panel-title">Cadastre-se!!</h3>
-            </div>
-            <div class="panel-body" style="background-color: #f0f2f7;">
-
+          <div id="cadastro-box" data-spy="affix">
+            <form>
+              <p>Todo dia conteúdo exclusivo sobre Marketing Digital. Vai perder essa oportunidade?</p>
+              <div class="input-group">
+                 <input class="form-control" type="text" name="name" placeholder="Nome Completo*">
+              </div>
+              <div class="input-group">
+                <input class="form-control" type="email" name="email" placeholder="Email*">
+              </div>
+              <div class="input-group">
+                <input class="form-control" type="text" name="empresa" placeholder="Empresa*">
+              </div>
+              <div class="input-group">
+                <select class="form-control" name="cargo">
+                  <option>Gerente</option>
+                  <option>Analista</option>
+                  <option>Outros</option>
+                </select>
+              </div>
+              <span>Campos com * são obrigatórios</span>
+              <input type="submit" class="form-control submit" value="Quero Receber">
+            </form>
+          </div>
             </div>
           </div>
         </div>

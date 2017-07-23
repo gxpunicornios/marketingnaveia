@@ -1,6 +1,7 @@
 body{
     background-color: #f0f2f7;
     margin-bottom: 500px;
+    font-family:'Roboto', sans-serif !important;
 }
 
 header{
@@ -10,7 +11,7 @@ header{
     background-color: transparent;
     color: #fff;
     font-weight: bold;
-    font-family: "Open Sans";
+    font-family:'Roboto', sans-serif;
     text-transform: uppercase;
 }
 
@@ -70,13 +71,31 @@ a{
 }
 
 #cadastro{
-    margin-top:-100px;
-}
-.affix-top{
-    position: relative;
+    margin-top:-200px;
+    margin-bottom:200px;
 }
 
-.affix{
+#cadastro-box{
+    font-family:'Roboto', sans-serif;
+    right:50px;
     position: fixed;
+    background-color: #512772;
+    color: #fff;
+    width: 250px;
+    height: 330px;
+    z-index: 999;
+    padding: 10px 10px 10px 10px;
+}
+
+#cadastro-box p {
+    font-weight: bold;
+}
+#cadastro-box span {
+    font-size: 10px;
+}
+
+#cadastro-box .submit {
+    background-color: #6afac5;
+    color: #512772;
 }
 
