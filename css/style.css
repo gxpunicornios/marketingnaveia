@@ -130,6 +130,7 @@ a{
     height: 150px;
     background: url(../img/logo.png) no-repeat;
     background-position-y: 10px;
+    margin-left: 10px;
 }
 
 #cadastro-full{
