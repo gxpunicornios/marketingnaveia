@@ -84,6 +84,8 @@ a{
 }
 
 #contato .submit{
+    border-size: 0px;
+    border-radius: 0px;
     background-color: #6afac5;
     color: #512772;
 }
@@ -115,6 +117,8 @@ a{
 }
 
 #cadastro-box .submit {
+    border-size: 0px;
+    border-radius: 0px;
     background-color: #6afac5;
     color: #512772;
 }
@@ -142,6 +146,8 @@ a{
 }
 
 #cadastro-full .submit {
+    border-size: 0px;
+    border-radius: 0px;
     background-color: #6afac5;
     color: #512772;
 }
@@ -195,10 +201,7 @@ footer i.fa-facebook{
     text-align: center;
 }
 
-#sobre .submit{
-    background-color: #6afac5;
-    color: #512772;
-}
+
 .navbar-default .navbar-nav li a{
     font-family: "Roboto", sans-serif;
     font-weight: bold;
@@ -211,4 +214,13 @@ footer i.fa-facebook{
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
     border-color: rgba(106, 250, 197, 0.33);
     background-color: rgba(81, 39, 114, 0.42);
+}
+.input-field{
+    width: 100%;
+}
+
+.input-group {
+    position: relative;
+     display: block;
+    border-collapse: separate;
 }
