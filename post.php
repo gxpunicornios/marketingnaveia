@@ -26,8 +26,7 @@ $post = $db->getPost($id);
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="<?php echo substr($post['post_description'],0,140)?>">
 
   <title>Marketing na Veia - <?php echo $post['post_title'] . " " . $post['post_subtitle']?></title>
 
