@@ -247,7 +247,8 @@ footer i.fa-facebook{
   }
 
   footer i{
-    margin-left: 18px;
-    margin-right: 0px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }
