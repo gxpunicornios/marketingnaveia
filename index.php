@@ -25,6 +25,7 @@ date_default_timezone_set('America/Sao_Paulo');
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
 </head>
+<?php include_once("analyticstracking.php") ?>
 <body>
 
 
