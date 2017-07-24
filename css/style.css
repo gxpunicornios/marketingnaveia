@@ -240,4 +240,8 @@ footer i.fa-facebook{
     padding: 10px 10px;
   }
 
+  #logo{
+      width: 100px;
+      height: 100px;
+  }
 }
