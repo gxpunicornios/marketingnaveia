@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php 
+<?php
 include 'db_connection.php';
 setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
 date_default_timezone_set('America/Sao_Paulo');
@@ -28,7 +28,7 @@ date_default_timezone_set('America/Sao_Paulo');
 <body>
 
 
-<header class="intro-header" style="background-image: url('img/banner-lo2.jpg')">
+<header class="intro-header">
     <?php include 'navbar.php'; ?>
     <div class="site-heading container align-items-center">
       <div>
@@ -68,7 +68,7 @@ date_default_timezone_set('America/Sao_Paulo');
                 </select>
               </div>
               <span>Preencha todos os campos!</span>
-              
+
               <input type="submit" class="form-control submit" value="Quero Receber">
               <p></p>
               <div class="alert none" style="font-size: 10px;height: 45px;padding: 10px;">
@@ -107,7 +107,7 @@ date_default_timezone_set('America/Sao_Paulo');
       <input type="submit" class="form-control submit" value="Quero Receber">
       <p></p>
       <div class="alert none">
-        
+
       </div>
     </form>
   </section>
@@ -140,7 +140,7 @@ date_default_timezone_set('America/Sao_Paulo');
       <div class="row">
         <div class="col-lg-2"></div>
         <div class="col-lg-8">
-          <?php 
+          <?php
           $db = new DbConnect();
           $db->open();
           $result = $db->getPosts(10);
@@ -148,7 +148,7 @@ date_default_timezone_set('America/Sao_Paulo');
             while($row = mysqli_fetch_assoc($result))
             {
           ?>
- 
+
           <div class="post">
             <a href="/post.php?id=<?php echo $row['post_id']?>">
               <h1 class="titulo">
@@ -161,7 +161,7 @@ date_default_timezone_set('America/Sao_Paulo');
             <p class="referencia">Postado por <b><?php echo $row['post_author']; ?></b> em <?php echo strftime('%A, %d de %B de %Y', strtotime($row['post_date_created'])); ?></p>
           </div>
           <hr>
-          <?php    
+          <?php
             }
           }
           ?>

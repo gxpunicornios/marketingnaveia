@@ -4,8 +4,10 @@ body{
     font-family:'Roboto', sans-serif !important;
 }
 
-header{
+header.intro-header{
   height: 400px;
+  background-image: url('../img/banner_home_blog_lo1.png');
+  background-position: 0px -50px;
 }
 .transparent{
     background-color: transparent;
@@ -224,4 +226,14 @@ footer i.fa-facebook{
     position: relative;
      display: block;
     border-collapse: separate;
+}
+
+@media (max-width: 600px) {
+  header.intro-header{
+    height: 600px;
+    background-image: url('../img/homemobile_lo1.png');
+    margin: 0;
+    background-position: -250px 0px;
+  }
+
 }
