@@ -17,14 +17,13 @@
 
 </head>
 <body>
-  <!-- Page Header -->
-  <!-- Set your background image for this header on the line below. -->
+
   <header class="intro-header" style="background-image: url('img/banner-lo2.jpg')">
     <nav class="navbar navbar-light navbar-toggleable-sm bg-faded justify-content-center transparent">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a href="/" class="navbar-brand d-flex w-50 mr-auto">Brand</a>
+      <a href="#" id="logo" class="navbar-brand d-flex w-50 mr-auto"></a>
       <div class="navbar-collapse collapse" id="collapsingNavbar3">
         <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
           <li class="nav-item">
@@ -46,9 +45,11 @@
         <div class="col col-md-4">
           <div id="cadastro-box" data-spy="affix">
             <form>
-              <p>Todo dia conteúdo exclusivo sobre Marketing Digital. Vai perder essa oportunidade?</p>
+              <p>Todo dia conteúdo exclusivo sobre Marketing Digital. Vai perder essa oportunidade?
+                <br><span>Fique tranquilo, não vamos mandar spam</span>
+              </p>
               <div class="input-group">
-                 <input class="form-control" type="text" name="name" placeholder="Nome Completo*">
+                <input class="form-control" type="text" name="name" placeholder="Nome Completo*">
               </div>
               <div class="input-group">
                 <input class="form-control" type="email" name="email" placeholder="Email*">
@@ -67,11 +68,37 @@
               <input type="submit" class="form-control submit" value="Quero Receber">
             </form>
           </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
+    </div>
+    </div>
+  </section>
+
+  <section id="cadastro-full" style="display: none;">
+    <form>
+      <p>Todo dia conteúdo exclusivo sobre Marketing Digital. Vai perder essa oportunidade?
+        <br><span>Fique tranquilo, não vamos mandar spam</span>
+      </p>
+      <div class="input-group">
+        <input class="form-control" type="text" name="name" placeholder="Nome Completo*">
+      </div>
+      <div class="input-group">
+        <input class="form-control" type="email" name="email" placeholder="Email*">
+      </div>
+      <div class="input-group">
+        <input class="form-control" type="text" name="empresa" placeholder="Empresa*">
+      </div>
+      <div class="input-group">
+        <select class="form-control" name="cargo">
+          <option>Gerente</option>
+          <option>Analista</option>
+          <option>Outros</option>
+        </select>
+      </div>
+      <span>Campos com * são obrigatórios</span>
+      <input type="submit" class="form-control submit" value="Quero Receber">
+    </form>
   </section>
 
 
