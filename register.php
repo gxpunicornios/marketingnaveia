@@ -7,6 +7,9 @@ $ip = $_POST["ip"];
 if(empty($ip)){
     $ip = "UNKNOW";
 }
+ if (preg_match('/:/',$ip)){
+        $ip = convert_ipv6_to_ipv4($ip);
+    }
 $db = new DbConnect();
 $db->open();
 $output = $db->insertUserData($_POST["nome"], $_POST["email"], $_POST["idade"], $_POST["escolaridade"], $ip);
@@ -36,9 +39,9 @@ function get_client_ip() {
         $ipaddress = 'UNKNOWN';
     
 
-    // if (preg_match('/:/',$ipaddress)){
-    //     $ipaddress = convert_ipv6_to_ipv4($ipaddress);
-    // }
+    if (preg_match('/:/',$ipaddress)){
+        $ipaddress = convert_ipv6_to_ipv4($ipaddress);
+    }
     return $ipaddress;
 }
 
