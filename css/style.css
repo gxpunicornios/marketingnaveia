@@ -1,6 +1,6 @@
 body{
     background-color: #f0f2f7;
-    margin-bottom: 500px;
+    /*margin-bottom: 500px;*/
     font-family:'Roboto', sans-serif !important;
 }
 
@@ -21,7 +21,7 @@ header{
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    margin-bottom: 80px;
+    margin-bottom: 0px;
 }
 
 .intro-header .site-heading {
@@ -56,18 +56,36 @@ a{
 }
 #blog-posts{
     width:100%;
-    margin:auto;
+    padding: 50px;
 }
 
 #contato{
     background-color: #73358b;
     color: #fff;
+    padding: 30px;
 }
 
 #contato h1{
     font-weight: bold;
-    font-family: "Open Sans";
+    font-family: "Roboto", sans-serif;
     text-align: center;
+}
+
+#contato p{
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+#contato span{
+    font-size:12px;
+    color: #fff;
+    text-align: center;
+}
+
+#contato .submit{
+    background-color: #6afac5;
+    color: #512772;
 }
 
 #cadastro{
@@ -88,9 +106,11 @@ a{
 }
 
 #cadastro-box p {
+    color: #fff;
     font-weight: bold;
 }
 #cadastro-box span {
+    color: #fff;
     font-size: 10px;
 }
 
@@ -108,14 +128,15 @@ a{
 #cadastro-full{
     background-color: #512772;
     color: #f0f2f6;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    padding: 50px;
 }
 
 #cadastro-full p {
+    color: #fff;
     font-weight: bold;
 }
 #cadastro-full span {
+    color: #fff;
     font-size: 10px;
 }
 
@@ -148,4 +169,32 @@ i.fa-facebook{
 
 .site-heading h1,p{
   color: #512772;
+}
+#sobre{
+    background-color: #73358b;
+    color: #fff;
+    padding: 30px;
+}
+
+#sobre h1{
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+
+#sobre p{
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+#sobre span{
+    font-size:12px;
+    color: #fff;
+    text-align: center;
+}
+
+#sobre .submit{
+    background-color: #6afac5;
+    color: #512772;
 }
