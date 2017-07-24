@@ -34,7 +34,7 @@ date_default_timezone_set('America/Sao_Paulo');
       <div>
         <h1>MARKETING<br>NA VEIA</h1>
         <hr class="meio">
-        <p class ="subheading">A sua dose diária<br>de conteúdo digital</p>
+        <p class ="subheading teste">A sua dose diária<br>de conteúdo digital</p>
       </div>
     </div>
   </header>
