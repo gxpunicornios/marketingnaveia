@@ -82,7 +82,7 @@ a{
     background-color: #512772;
     color: #fff;
     width: 250px;
-    height: 330px;
+    height: 350px;
     z-index: 999;
     padding: 10px 10px 10px 10px;
 }
@@ -98,7 +98,31 @@ a{
     background-color: #6afac5;
     color: #512772;
 }
+#logo{
+    margin-bottom: -100px;
+    width: 250px;
+    height: 150px;
+    background: url(../img/logo.png) no-repeat;
+}
 
+#cadastro-full{
+    background-color: #512772;
+    color: #f0f2f6;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#cadastro-full p {
+    font-weight: bold;
+}
+#cadastro-full span {
+    font-size: 10px;
+}
+
+#cadastro-full .submit {
+    background-color: #6afac5;
+    color: #512772;
+}
 i{
   color: white;
   border-radius: 50%;
