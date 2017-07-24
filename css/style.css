@@ -236,4 +236,8 @@ footer i.fa-facebook{
     background-position: -250px 0px;
   }
 
+  .site-heading.container{
+    padding: 50px 10px;
+  }
+
 }
