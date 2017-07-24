@@ -184,7 +184,7 @@ date_default_timezone_set('America/Sao_Paulo');
         <div class="col-lg-2"></div>
         <div class="col-lg-8">
           <form>
-            <p>Quer falar conosco? Entre em contato, através do formulário abaixo!</span>
+            <p>Quer saber como trabalhar com marketing em startups? Entre em contato através do formulário!</span>
             </p>
             <div class="input-group">
               <input class="form-control" type="text" name="name" placeholder="Nome Completo">
