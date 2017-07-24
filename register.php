@@ -1,14 +1,19 @@
 <?php
 include 'db_connection.php';
+
+
 $output = "";
+$ip = $_POST["ip"];
+if(empty($ip)){
+    $ip = "UNKNOW";
+}
 $db = new DbConnect();
 $db->open();
-$ip = get_client_ip();
 $output = $db->insertUserData($_POST["nome"], $_POST["email"], $_POST["idade"], $_POST["escolaridade"], $ip);
 $db->close();
 
 header('Content-Type: application/json');
-$result = array('result' => $output);
+$result = array("result" => $output);
 echo json_encode($result);
 
 
@@ -31,9 +36,9 @@ function get_client_ip() {
         $ipaddress = 'UNKNOWN';
     
 
-    if (preg_match('/:/',$ipaddress)){
-        $ipaddress = convert_ipv6_to_ipv4($ipaddress);
-    }
+    // if (preg_match('/:/',$ipaddress)){
+    //     $ipaddress = convert_ipv6_to_ipv4($ipaddress);
+    // }
     return $ipaddress;
 }
 

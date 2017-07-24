@@ -4,7 +4,7 @@ date_default_timezone_set('America/Sao_Paulo');
 class DbConnect {
 
 	private $servername = "carnarvaldb.southcentralus.cloudapp.azure.com";
-	private $username = "festwired";
+	private $username = "mktnaveia";
 	private $password = "wsws8443";
 	private $db_name = "mktnaveia";
 	private $conn = null;
@@ -34,14 +34,15 @@ class DbConnect {
 		}
 
 
-		$date = date('Y-m-dd H:i:s');
-		$sql = "INSERT INTO user VALUES (DEFAULT,'$user_name','$user_email','$user_age','$user_schoolarship','$user_ip',$date)";
+		$date = date('Y-m-d H:i:s');
+		$sql = "INSERT INTO user VALUES (DEFAULT,'$user_name','$user_email','$user_age','$user_schoolarship','$user_ip','$date')";
 
 		if ($this->conn->query($sql) === TRUE) {
 		    return 0; // successfull added
 		} else {
+			echo "Error: " . $sql . "<br>" . $this->conn->error;
 			return 3; //unexpected error;
-		    //echo "Error: " . $sql . "<br>" . $this->conn->error;
+		    
 		}
 	}
 

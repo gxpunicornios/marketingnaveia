@@ -1,5 +1,14 @@
 $(document).ready(function(){
 
+    var ip = '';
+    $.get("http://ipinfo.io", function(response) {
+        //alert(response.ip);
+        ip = response.ip;
+        $('#cadastro #register').append($('<input type="text" class="user-ip" name="ip" value="'+ip+'" hidden>'));
+        $('#cadastro-full #register').append($('<input type="text" class="user-ip" name="ip" value="'+ip+'" hidden>'));
+        }, "jsonp");
+
+    
 
 
     function update(){
@@ -33,9 +42,8 @@ $(document).ready(function(){
     // Variable to hold request
   var request;
 
-  // Bind to the submit event of our form
-  $("#register").submit(function(event){
-
+  function register(event){
+      
       // Prevent default posting of form - put here to work in case of errors
       event.preventDefault();
 
@@ -45,6 +53,8 @@ $(document).ready(function(){
       }
       // setup some local variables
       var $form = $(this);
+
+      
 
       // Let's select and cache all the fields
       var $inputs = $form.find("input, select, button, textarea");
@@ -67,19 +77,28 @@ $(document).ready(function(){
       // Callback handler that will be called on success
       request.done(function (response, textStatus, jqXHR){
           // Log a message to the console
-          var obj = JSON.parse(response);
-          console.log(obj.result);
-          
+          //var obj = JSON.parse(response);
+          var result = response.result;
+          if(result === 0){
+              $("#register .alert").attr( "class", "alert alert-success" );
+              $("#register .alert").html("<b>Sucesso!</b> Obrigado por se cadastrar");
+          }
+          else if(result === 2){
+              $("#register .alert").attr( "class", "alert alert-danger" );
+              $("#register .alert").html("<b>Ops!</b> Seu email já está cadastrado em nosso sistema");
+          }
+          else{
+              $("#register .alert").attr( "class", "alert alert-danger" );
+              $("#register .alert").html("<b>Ops!</b> Houve algum problema com seu cadastro");
+              
+          }
       });
 
 
       // Callback handler that will be called on failure
       request.fail(function (jqXHR, textStatus, errorThrown){
           // Log the error to the console
-          console.error(
-              "The following error occurred: "+
-              textStatus, errorThrown
-          );
+          console.error("The following error occurred: "+textStatus +" " + errorThrown);
       });
 
       // Callback handler that will be called regardless
@@ -89,7 +108,11 @@ $(document).ready(function(){
           $inputs.prop("disabled", false);
       });
 
-  });
+  }
+
+  // Bind to the submit event of our form
+  $("#cadastro #register").submit(register);
+  $("#cadastro-full #register").submit(register);
     // Select all links with hashes
     $('a[href*="#"]')
     // Remove links that don't actually link to anything
