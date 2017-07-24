@@ -5,7 +5,7 @@ body{
 }
 
 header{
-  height: 300px;
+  height: 400px;
 }
 .transparent{
     background-color: transparent;
@@ -25,7 +25,7 @@ header{
 }
 
 .intro-header .site-heading {
-    padding: 100px 0 50px;
+    padding: 50px 50px 50px;
     color: #fff;
 }
 
@@ -52,6 +52,7 @@ hr{
 a{
   color: #512772;
   text-decoration: none;
+  font-family:'Roboto', sans-serif !important;
 }
 #blog-posts{
     width:100%;
@@ -98,12 +99,29 @@ a{
     color: #512772;
 }
 
+i{
+  color: white;
+  border-radius: 50%;
+  padding: 10px 10px 10px 10px;
+  border: 1px solid #512772;
+  background-color: #512772;
+  margin: 30px 15px;
+}
+i.fa-facebook{
+  padding: 10px 20px 10px 20px;
+}
+
 .meio{
   max-width: 100px;
   border-width: 4px;
+  margin: 10px 0px;
 }
 
 .post a:hover{
-  color: black;
+  color: #6afac5;
   text-decoration: none;
+}
+
+.site-heading h1,p{
+  color: #512772;
 }
