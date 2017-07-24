@@ -40,6 +40,7 @@ $post = $db->getPost($id);
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
 </head>
+<?php include_once("analyticstracking.php") ?>
 <body>
     <header class="intro-header" style="background-image: url('img/banner-post.png')">
         <?php include 'navbar.php'; ?>
