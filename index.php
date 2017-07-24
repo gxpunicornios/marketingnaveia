@@ -1,5 +1,12 @@
 <!DOCTYPE html>
+<?php 
+include 'db_connection.php';
+setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+date_default_timezone_set('America/Sao_Paulo');
+
+?>
 <html lang="pt">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,39 +29,7 @@
 
 
 <header class="intro-header" style="background-image: url('img/banner-lo2.jpg')">
-    <!-- Navigation -->
-    <nav class="navbar navbar-default transparent" style="border: 0px;">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span style="color: #6afac5;">Menu</span> <i class="fa fa-bars" style="color: #6afac5;"></i>
-          </button>
-          <a id="logo" class="navbar-brand" href="#"></a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#sobre">Sobre</a>
-            </li>
-            <li>
-              <a href="#blog">Blog</a>
-            </li>
-            <li>
-              <a href="#contato">Contato</a>
-            </li>
-          </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-      </div>
-      <!-- /.container -->
-    </nav>
+    <?php include 'navbar.php'; ?>
     <div class="site-heading container align-items-center">
       <div>
         <h1>MARKETING<br>NA VEIA</h1>
@@ -87,9 +62,9 @@
               <div class="input-group">
                 <select class="form-control" name="escolaridade" required>
                   <option value="" disabled selected>Qual sua Escolaridade?</option>
-                  <option value="1">Ensino médio Completo</option>
-                  <option value="2">Ensino Superior Cursando</option>
-                  <option value="3">Ensino Superior Completo</option>
+                  <option value="1">Ensino Fundamental</option>
+                  <option value="2">Ensino Médio</option>
+                  <option value="3">Ensino Superior (cursando ou completo)</option>
                 </select>
               </div>
               <span>Preencha todos os campos!</span>
@@ -122,10 +97,10 @@
       </div>
       <div class="input-group">
         <select class="form-control" name="escolaridade" required>
-          <option value="" disabled selected>Qual sua Escolaridade?</option>
-          <option value="1">Ensino médio Completo</option>
-          <option value="2">Ensino Superior Cursando</option>
-          <option value="3">Ensino Superior Completo</option>
+            <option value="" disabled selected>Qual sua Escolaridade?</option>
+            <option value="1">Ensino Fundamental</option>
+            <option value="2">Ensino Médio</option>
+            <option value="3">Ensino Superior (cursando ou completo)</option>
         </select>
       </div>
       <span>Preencha todos os campos!</span>
@@ -165,30 +140,31 @@
       <div class="row">
         <div class="col-lg-2"></div>
         <div class="col-lg-8">
+          <?php 
+          $db = new DbConnect();
+          $db->open();
+          $result = $db->getPosts(10);
+          if(!empty($result)){
+            while($row = mysqli_fetch_assoc($result))
+            {
+          ?>
+ 
           <div class="post">
-            <a href="link">
+            <a href="/post.php?id=<?php echo $row['post_id']?>">
               <h1 class="titulo">
-                ESSE AQUI É O POST NÚMERO 1
+                <?php echo $row['post_title'] . " " . $row['post_subtitle']?>
               </h1>
             </a>
             <h3 class="descricao">
-              Essa aqui é a descrição do "Post Número 1"
+              <?php echo substr($row['post_description'],0,90)?>
             </h3>
-            <p class="referencia">Postado por ""Nome do(a) Autor(a)"  em 23 de julho de 2017</p>
+            <p class="referencia">Postado por <b><?php echo $row['post_author']; ?></b> em <?php echo strftime('%A, %d de %B de %Y', strtotime($row['post_date_created'])); ?></p>
           </div>
           <hr>
-          <div class="post">
-            <a href="link">
-              <h1 class="titulo">
-                ESSE AQUI É O POST NÚMERO 1
-              </h1>
-            </a>
-            <h3 class="descricao">
-              Essa aqui é a descrição do "Post Número 1"
-            </h3>
-            <p class="referencia">Postado por ""Nome do(a) Autor(a)"  em 23 de julho de 2017</p>
-          </div>
-          <hr>
+          <?php    
+            }
+          }
+          ?>
         </div>
         <div class="col-lg-2"></div>
       </div>
@@ -232,42 +208,6 @@
     </div>
   </section>
 
-  <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4"></div>
-          <div class="col-md-4">
-            <a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-youtube-play fa-2x"></i></a>
-            <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
-          </div>
-          <div class="col-md-4"></div>
-        </div>
-          <div class="row">
-              <div class="col-lg-12">
-                <p class="copyright text-muted text-center">Copyright &copy; Your Website 2016</p>
-              </div>
-          </div>
-      </div>
-  </footer>
-  <!-- Bootstrap Core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <!--<script src="lib/js/jquery-3.2.1.min.js"></script>-->
-  <!--<script src="lib/js/bootstrap.min.js"></script>-->
-  <script src="js/functions.js"></script>
-  
-
+  <?php include 'footer.php' ?>
 </body>
-<script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-103039767-1', 'auto');
-      ga('send', 'pageview');
-
-  </script>
 </html>

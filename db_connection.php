@@ -58,6 +58,28 @@ class DbConnect {
 			return false;
 		}
 	}
+
+	function getPost($id){
+		if(!isset($id)){
+			return false;
+		}
+
+		$sql = "SELECT * FROM post where post_id = $id";
+		$result = $this->conn->query($sql);
+		if($result->num_rows > 0){
+			return mysqli_fetch_array($result);
+		}
+	}
+
+	function getPosts($limit){
+		$sql = "SELECT * FROM post LIMIT ".$limit;
+		$result = $this->conn->query($sql);
+		if($result->num_rows > 0){
+			return $result;
+		}
+
+		return null;
+	}
 } 
 
 // $db = new DbConnect();
