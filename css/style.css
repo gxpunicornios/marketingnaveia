@@ -243,6 +243,6 @@ footer i.fa-facebook{
   #logo{
       width: 125px;
       height: 100px;
-      padding: 0px 10px;
+      margin-left: 10px;
   }
 }
