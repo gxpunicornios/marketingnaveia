@@ -233,7 +233,7 @@ footer i.fa-facebook{
     height: 600px;
     background-image: url('../img/homemobile_lo1.png');
     margin: 0;
-    background-position: -250px 0px;
+    background-position: -270px 0px;
   }
 
   .site-heading.container{
@@ -243,5 +243,6 @@ footer i.fa-facebook{
   #logo{
       width: 125px;
       height: 100px;
+      padding: 0px 10px;
   }
 }
