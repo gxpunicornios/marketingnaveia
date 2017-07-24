@@ -4,13 +4,13 @@ $(document).ready(function(){
 
     function update(){
         if($(window).width() < 768){
-            $('.navbar-light .navbar-nav .nav-link').css('color','#512772');
-            $('.navbar-light .navbar-nav .nav-link:hover').css('color','#5c3f72');
+            $('.navbar-default .navbar-nav li a').css('color','#512772');
+            $('.navbar-default .navbar-nav li a:hover').css('color','#5c3f72');
             showCadastrarFullSection();
         }
         else{
-            $('.navbar-light .navbar-nav .nav-link').css('color','#6afac5');
-            $('.navbar-light .navbar-nav .nav-link:hover').css('color','#a1facb');
+            $('.navbar-default .navbar-nav li a').css('color','#6afac5');
+            $('.navbar-default .navbar-nav li a:hover').css('color','#a1facb');
             showCadastrarBox();
         }
     }

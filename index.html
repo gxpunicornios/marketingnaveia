@@ -10,7 +10,8 @@
   <title>Marketing na Veia</title>
 
   <!-- Bootstrap Core CSS -->
-  <link href="lib/css/bootstrap.min.css" rel="stylesheet">
+  <!--<link href="lib/css/bootstrap.min.css" rel="stylesheet">-->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!--<link href="lib/css/bootstrap-theme.min.css" rel="stylesheet">-->
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
@@ -19,31 +20,65 @@
 </head>
 <body>
 
-  <header class="intro-header" style="background-image: url('img/banner-lo2.jpg')">
-    <nav class="navbar navbar-light navbar-toggleable-sm bg-faded justify-content-center transparent">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a href="#" id="logo" class="navbar-brand d-flex w-50 mr-auto"></a>
-      <div class="navbar-collapse collapse" id="collapsingNavbar3">
-        <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#sobre">Sobre</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#blog-posts">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contato">Contato</a>
-          </li>
+<!--<nav class="navbar navbar-light navbar-toggleable-sm bg-faded justify-content-center transparent">-->
+  <!--<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">-->
+    <!--<span class="navbar-toggler-icon"></span>-->
+  <!--</button>-->
+  <!--<a href="#" id="logo" class="navbar-brand d-flex w-50 mr-auto"></a>-->
+  <!--<div class="navbar-collapse collapse" id="collapsingNavbar3">-->
+    <!--<ul class="nav navbar-nav ml-auto w-100 justify-content-end">-->
+      <!--<li class="nav-item">-->
+        <!--<a class="nav-link" href="#">Home</a>-->
+      <!--</li>-->
+      <!--<li class="nav-item">-->
+        <!--<a class="nav-link" href="#sobre">Sobre</a>-->
+      <!--</li>-->
+      <!--<li class="nav-item">-->
+        <!--<a class="nav-link" href="#blog-posts">Blog</a>-->
+      <!--</li>-->
+      <!--<li class="nav-item">-->
+        <!--<a class="nav-link" href="#contato">Contato</a>-->
+      <!--</li>-->
 
-        </ul>
+    <!--</ul>-->
+  <!--</div>-->
+<!--</nav>-->
+
+
+<header class="intro-header" style="background-image: url('img/banner-lo2.jpg')">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default transparent" style="border: 0px;">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span style="color: #6afac5;">Menu</span> <i class="fa fa-bars" style="color: #6afac5;"></i>
+          </button>
+          <a id="logo" class="navbar-brand" href="#"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#sobre">Sobre</a>
+            </li>
+            <li>
+              <a href="#blog">Blog</a>
+            </li>
+            <li>
+              <a href="#contato">Contato</a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
       </div>
+      <!-- /.container -->
     </nav>
-
     <div class="site-heading container align-items-center">
       <div>
         <h1>MARKETING<br>NA VEIA</h1>
@@ -232,8 +267,10 @@
       </div>
   </footer>
   <!-- Bootstrap Core JavaScript -->
-  <script src="lib/js/jquery-3.2.1.min.js"></script>
-  <script src="lib/js/bootstrap.min.js"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <!--<script src="lib/js/jquery-3.2.1.min.js"></script>-->
+  <!--<script src="lib/js/bootstrap.min.js"></script>-->
   <script src="js/functions.js"></script>
 
 </body>

@@ -123,6 +123,7 @@ a{
     width: 250px;
     height: 150px;
     background: url(../img/logo.png) no-repeat;
+    background-position-y: 10px;
 }
 
 #cadastro-full{
@@ -144,7 +145,7 @@ a{
     background-color: #6afac5;
     color: #512772;
 }
-i{
+footer i{
   color: white;
   border-radius: 50%;
   padding: 10px 10px 10px 10px;
@@ -152,7 +153,7 @@ i{
   background-color: #512772;
   margin: 30px 15px;
 }
-i.fa-facebook{
+footer i.fa-facebook{
   padding: 10px 15px 10px 15px;
 }
 
@@ -197,4 +198,17 @@ i.fa-facebook{
 #sobre .submit{
     background-color: #6afac5;
     color: #512772;
+}
+.navbar-default .navbar-nav li a{
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #6afac5;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    border-color: rgba(106, 250, 197, 0.33);
+    background-color: rgba(81, 39, 114, 0.42);
 }
