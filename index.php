@@ -3,7 +3,6 @@
 include 'db_connection.php';
 setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
 date_default_timezone_set('America/Sao_Paulo');
-
 ?>
 <html lang="pt">
 
@@ -11,10 +10,10 @@ date_default_timezone_set('America/Sao_Paulo');
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
+  <meta name="description" content="Nossa missão é entregar conteúdo de relevância e qualidade para ajudar profissionais de marketing a se manterem atualizados e contribuir para seu desenvolvimento pessoal e profissional.">
   <meta name="author" content="">
 
-  <title>Marketing na Veia</title>
+  <title>Marketing na Veia - A sua dose diária de conteúdo digital</title>
 
   <!-- Bootstrap Core CSS -->
   <!--<link href="lib/css/bootstrap.min.css" rel="stylesheet">-->

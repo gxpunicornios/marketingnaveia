@@ -16,7 +16,7 @@ if($currentpage== "/"|| $currentpage== "/index.php") {
             <span class="sr-only">Toggle navigation</span>
             <span style="color: #6afac5;">Menu</span> <i class="fa fa-bars" style="color: #6afac5;"></i>
           </button>
-          <a id="logo" class="navbar-brand" href="#"></a>
+          <a id="logo" class="navbar-brand" href="<?php echo $link . "/#"?>"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -29,7 +29,7 @@ if($currentpage== "/"|| $currentpage== "/index.php") {
               <a href="<?php echo $link . "/#sobre"?>">Sobre</a>
             </li>
             <li>
-              <a href="<?php echo $link . "/#blog"?>">Blog</a>
+              <a href="<?php echo $link . "/#blog-posts"?>">Blog</a>
             </li>
             <li>
               <a href="<?php echo $link . "/#contato"?>">Contato</a>
