@@ -13,7 +13,7 @@ class RegisterForm {
                 break;
             case 'ebook':
                 $this->labelInit = "Preencha os campos indicados para receber seu Ebook gratuíto!";
-                $this->submitText = "Fazer Download";
+                $this->submitText = "Quero Receber";
                 $this->actionId = "ebook";
         }
 

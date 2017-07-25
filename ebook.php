@@ -41,7 +41,7 @@ header("Content-type: text/html; charset=utf-8");
                     <div class="col col-md-2"></div>
                     <div class="col col-md-6">
                 <h1> Baixe o Ebook agora: </h1>
-                <h2> GROWTH HACKING: O que é e como aplica na minha estratégia</h2>
+                <h2> GROWTH HACKING: O que é e como aplicar na minha estratégia</h2>
                 </div>
             </div> 
         </header>
