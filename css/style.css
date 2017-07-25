@@ -268,8 +268,7 @@ footer i.fa-facebook{
   }
 
   footer i{
-    width: 15%;
-    margin-left: 4.5%;
-    margin-right: 4.5%;
+    width: 50px;
+    margin: 40px 15px;
   }
 }
