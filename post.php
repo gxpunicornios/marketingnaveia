@@ -45,7 +45,7 @@ $post = $db->getPost($id);
     <header class="intro-header" style="background-image: url('img/banner-post.png')">
         <?php include 'navbar.php'; ?>
         <div id="blog-head" class="site-heading container align-items-center">
-            <div class="post-title" style="font-size:36px;color:white;font-weight:bold;"><?php echo $post['post_title']; ?></div>
+            <div class="post-title" style="font-size:50px;color:white;font-weight:bold;"><?php echo $post['post_title']; ?></div>
             <div class="post-subtitle" style="font-size:26px;color:#512772;font-weight:bold;"><?php echo $post['post_subtitle']; ?></div>
             <p></p>
             <p style="color:#512772">Postado por <b><?php echo $post['post_author']; ?></b> em <?php echo strftime('%A, %d de %B de %Y', strtotime($post['post_date_created'])); ?></p>
