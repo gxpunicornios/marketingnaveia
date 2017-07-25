@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
-    var ip = '';
-    $.get("http://ipinfo.io", function(response) {
+   
+    $.getJSON("https://api.ipify.org?format=jsonp&callback=?", function(response) {
         //alert(response.ip);
-        ip = response.ip;
+        var ip = response.ip;
         $('#cadastro #register').append($('<input type="text" class="user-ip" name="ip" value="'+ip+'" hidden>'));
         $('#cadastro-full #register').append($('<input type="text" class="user-ip" name="ip" value="'+ip+'" hidden>'));
         }, "jsonp");

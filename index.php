@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <?php
 include 'db_connection.php';
+include 'form-register.php';
 setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
 date_default_timezone_set('America/Sao_Paulo');
+header("Content-type: text/html; charset=utf-8");
 ?>
 <html lang="pt">
 
 <head>
-  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Nossa missão é entregar conteúdo de relevância e qualidade para ajudar profissionais de marketing a se manterem atualizados e contribuir para seu desenvolvimento pessoal e profissional.">
@@ -47,33 +49,7 @@ date_default_timezone_set('America/Sao_Paulo');
         <div class="col col-md-4"></div>
         <div class="col col-md-4">
           <div id="cadastro-box" data-spy="affix">
-            <form id="register" method="post">
-              <p>Todo dia conteúdo exclusivo sobre Marketing Digital. Vai perder essa oportunidade?
-                <br><span>Fique tranquilo, não vamos mandar spam</span>
-              </p>
-              <div class="input-group">
-                <input class="form-control" type="text" name="nome" placeholder="Nome Completo" required>
-              </div>
-              <div class="input-group">
-                <input class="form-control" type="email" name="email" placeholder="Email" required>
-              </div>
-              <div class="input-group">
-                <input class="form-control" type="text" name="idade" placeholder="Idade" required>
-              </div>
-              <div class="input-group">
-                <select class="form-control" name="escolaridade" required>
-                  <option value="" disabled selected>Qual sua Escolaridade?</option>
-                  <option value="1">Ensino Fundamental</option>
-                  <option value="2">Ensino Médio</option>
-                  <option value="3">Ensino Superior (cursando ou completo)</option>
-                </select>
-              </div>
-              <span>Preencha todos os campos!</span>
-
-              <input type="submit" class="form-control submit" value="Quero Receber">
-              <p></p>
-              <div class="alert none" style="font-size: 10px;height: 45px;padding: 10px;">
-            </form>
+            <?php new RegisterForm('register'); ?>
           </div>
         </div>
       </div>
@@ -83,34 +59,7 @@ date_default_timezone_set('America/Sao_Paulo');
   </section>
 
   <section id="cadastro-full" style="display: none;">
-    <form id="register" method="post">
-      <p>Todo dia conteúdo exclusivo sobre Marketing Digital. Vai perder essa oportunidade?
-        <br><span>Fique tranquilo, não vamos mandar spam</span>
-      </p>
-      <div class="input-group">
-        <input class="form-control" type="text" name="nome" placeholder="Nome Completo" required>
-      </div>
-      <div class="input-group">
-        <input class="form-control" type="email" name="email" placeholder="Email" required>
-      </div>
-      <div class="input-group">
-        <input class="form-control" type="text" name="idade" placeholder="Idade" required>
-      </div>
-      <div class="input-group">
-        <select class="form-control" name="escolaridade" required>
-            <option value="" disabled selected>Qual sua Escolaridade?</option>
-            <option value="1">Ensino Fundamental</option>
-            <option value="2">Ensino Médio</option>
-            <option value="3">Ensino Superior (cursando ou completo)</option>
-        </select>
-      </div>
-      <span>Preencha todos os campos!</span>
-      <input type="submit" class="form-control submit" value="Quero Receber">
-      <p></p>
-      <div class="alert none">
-
-      </div>
-    </form>
+    <?php new RegisterForm('register'); ?>
   </section>
 
 
@@ -165,6 +114,8 @@ date_default_timezone_set('America/Sao_Paulo');
           <?php
             }
           }
+
+          $db->close();
           ?>
         </div>
         <div class="col-lg-2"></div>
