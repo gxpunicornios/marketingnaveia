@@ -25,9 +25,9 @@ if($currentpage== "/"|| $currentpage== "/index.php") {
             <li>
               <a href="<?php echo $link . "/#"?>">Home</a>
             </li>
-            <li>
+            <!--<li>
               <a href="<?php echo $link . "/#sobre"?>">Sobre</a>
-            </li>
+            </li>-->
             <li>
               <a href="<?php echo $link . "/#blog-posts"?>">Blog</a>
             </li>

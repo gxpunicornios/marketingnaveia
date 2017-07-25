@@ -72,7 +72,7 @@ class DbConnect {
 	}
 
 	function getPosts($limit){
-		$sql = "SELECT * FROM post LIMIT ".$limit;
+		$sql = "SELECT * FROM post ORDER BY post_date_created DESC LIMIT ".$limit;
 		$result = $this->conn->query($sql);
 		if($result->num_rows > 0){
 			return $result;

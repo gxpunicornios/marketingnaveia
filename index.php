@@ -3,11 +3,12 @@
 include 'db_connection.php';
 setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
 date_default_timezone_set('America/Sao_Paulo');
+header("Content-type: text/html; charset=utf-8");
 ?>
 <html lang="pt">
 
 <head>
-  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Nossa missão é entregar conteúdo de relevância e qualidade para ajudar profissionais de marketing a se manterem atualizados e contribuir para seu desenvolvimento pessoal e profissional.">
@@ -113,7 +114,7 @@ date_default_timezone_set('America/Sao_Paulo');
   </section>
 
 
-  <section id="sobre">
+  <!--<section id="sobre">
     <div class="container">
       <div class="row">
         <div class="col-lg-2"></div>
@@ -132,7 +133,7 @@ date_default_timezone_set('America/Sao_Paulo');
         <div class="col-md-3"></div>
       </div>
     </div>
-  </section>
+  </section>-->
 
 
   <section id="blog-posts">
@@ -164,6 +165,8 @@ date_default_timezone_set('America/Sao_Paulo');
           <?php
             }
           }
+
+          $db->close();
           ?>
         </div>
         <div class="col-lg-2"></div>
