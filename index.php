@@ -22,6 +22,7 @@ date_default_timezone_set('America/Sao_Paulo');
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="img/img_thumb.png" type="image/x-png">
 
 </head>
 <?php include_once("analyticstracking.php") ?>
@@ -30,7 +31,7 @@ date_default_timezone_set('America/Sao_Paulo');
 
 <header class="intro-header">
     <?php include 'navbar.php'; ?>
-    <div class="site-heading container align-items-center">
+    <div class="site-heading container home align-items-center">
       <div>
         <h1>MARKETING<br>NA VEIA</h1>
         <hr class="meio">
@@ -113,7 +114,7 @@ date_default_timezone_set('America/Sao_Paulo');
   </section>
 
 
-  <section id="sobre">
+  <!-- <section id="sobre">
     <div class="container">
       <div class="row">
         <div class="col-lg-2"></div>
@@ -132,7 +133,7 @@ date_default_timezone_set('America/Sao_Paulo');
         <div class="col-md-3"></div>
       </div>
     </div>
-  </section>
+  </section> -->
 
 
   <section id="blog-posts">
@@ -151,9 +152,9 @@ date_default_timezone_set('America/Sao_Paulo');
 
           <div class="post">
             <a href="/post.php?id=<?php echo $row['post_id']?>">
-              <h1 class="titulo">
+              <p class="titulo">
                 <?php echo $row['post_title'] . " " . $row['post_subtitle']?>
-              </h1>
+              </p>
             </a>
             <h3 class="descricao">
               <?php echo substr($row['post_description'],0,90)?>

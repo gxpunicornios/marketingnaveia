@@ -90,6 +90,7 @@ a{
     border-radius: 0px;
     background-color: #6afac5;
     color: #512772;
+    font-weight: bold;
 }
 
 #cadastro{
@@ -123,12 +124,13 @@ a{
     border-radius: 0px;
     background-color: #6afac5;
     color: #512772;
+    font-weight: bold;
 }
 #logo{
     margin-bottom: -100px;
     width: 250px;
     height: 150px;
-    background: url(../img/logo.png) no-repeat;
+    background: url(../img/logo_mktnaveia_branco.png) no-repeat;
     background-position-y: 10px;
     margin-left: 10px;
 }
@@ -170,6 +172,7 @@ footer i.fa-facebook{
   max-width: 100px;
   border-width: 4px;
   margin: 10px 0px;
+  border-color: white;
 }
 
 .post a:hover{
@@ -177,9 +180,26 @@ footer i.fa-facebook{
   text-decoration: none;
 }
 
-.site-heading h1,p{
+.post a p{
+  font-size: 38px;
+}
+
+.home h1,p{
+  color: white;
+}
+
+#blog-head h1,p{
   color: #512772;
 }
+
+.teste{
+  color: white;
+}
+
+#corpo h1,p{
+  color: #2d2e32;
+}
+
 #sobre{
     background-color: #73358b;
     color: #fff;

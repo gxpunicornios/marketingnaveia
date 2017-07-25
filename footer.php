@@ -4,8 +4,7 @@
           <div class="col-md-4"></div>
           <div class="col-md-4">
             <a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-youtube-play fa-2x"></i></a>
+            <a href="#"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
             <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
           </div>
           <div class="col-md-4"></div>
@@ -23,4 +22,3 @@
   <!--<script src="lib/js/jquery-3.2.1.min.js"></script>-->
   <!--<script src="lib/js/bootstrap.min.js"></script>-->
   <script src="js/functions.js"></script>
- 
