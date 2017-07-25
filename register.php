@@ -25,15 +25,15 @@ https://goo.gl/LmVgRx
 <br> <br>
 Um abraço,
 Equipe Marketing na Veia';
-    $mail = new PHPMailer;
+$mail = new PHPMailer;
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 $mail ->CharSet = "UTF-8";
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'carnarvalgs@gmail.com';                 // SMTP username
-$mail->Password = 'wsws8443';                           // SMTP password
+$mail->Username = 'mktnaveiablog@gmail.com';                 // SMTP username
+$mail->Password = 'unicornios2017';                           // SMTP password
 $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;                                    // TCP port to connect to
 

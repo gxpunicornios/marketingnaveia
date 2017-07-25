@@ -6,7 +6,7 @@ setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
 date_default_timezone_set('America/Sao_Paulo');
 header("Content-type: text/html; charset=utf-8");
 ?>
-<html lang="pt">
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -40,7 +40,7 @@ header("Content-type: text/html; charset=utf-8");
                 <div class="row">
                     <div class="col col-md-2"></div>
                     <div class="col col-md-6">
-                <h1> Baixe o Ebook agora: </h1>
+                <h1> Baixe agora o ebook! </h1>
                 <h2> GROWTH HACKING: O que é e como aplicar na minha estratégia</h2>
                 </div>
             </div> 
@@ -92,7 +92,7 @@ header("Content-type: text/html; charset=utf-8");
                             <div id="ebook-agradecimento" style="display: none; text-align:center; color:#fff;">
                                 <p style="color:#fff;">EBOOK ENVIADO PARA SEU E-MAIL!</p>
                                 <br>
-                                <p style="color:#fff;">Confira no seu e-mail o link para download do Ebook.</p>
+                                <p stySle="color:#fff;">Confira no seu e-mail o link para download do Ebook.</p>
                                 <br>
                                 <p style="color:#fff; font-weight:regular; font-size:12px;">Caso não veja o e-mail na sua caixa de entrada, confira se não está na caixa de spam ou promoções.</p>
                                 <hr style="border-width:1px; border-color:#6afac5;">

@@ -15,6 +15,12 @@ class RegisterForm {
                 $this->labelInit = "Preencha os campos indicados para receber seu Ebook gratuíto!";
                 $this->submitText = "Quero Receber";
                 $this->actionId = "ebook";
+                break;
+            case 'cadastro':
+                $this->labelInit = "Nosso objetivo é trazer tudo que pode ajudar você a se tornar o melhor profissional marketing digital para obter resultados concretos, sem achismos ou preconceitos. Vamos juntos?";
+                $this->submitText = "EU QUERO!";
+                $this->actionId = "register";
+                break;
         }
 
         echo '
