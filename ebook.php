@@ -92,7 +92,7 @@ header("Content-type: text/html; charset=utf-8");
                             <div id="ebook-agradecimento" style="display: none; text-align:center; color:#fff;">
                                 <p style="color:#fff;">EBOOK ENVIADO PARA SEU E-MAIL!</p>
                                 <br>
-                                <p stle="color:#fff;">Confira no seu e-mail o link para download do Ebook. (BOLD tamanho 20)</p>
+                                <p style="color:#fff;">Confira no seu e-mail o link para download do Ebook.</p>
                                 <br>
                                 <p style="color:#fff; font-weight:regular; font-size:12px;">Caso não veja o e-mail na sua caixa de entrada, confira se não está na caixa de spam ou promoções.</p>
                                 <hr style="border-width:1px; border-color:#6afac5;">
