@@ -12,7 +12,7 @@ header("Content-type: text/html; charset=utf-8");
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Nossa missão é entregar conteúdo de relevância e qualidade para ajudar profissionais de marketing a se manterem atualizados e contribuir para seu desenvolvimento pessoal e profissional.">
+        <meta name="description" content="Se você quer entender mais sobre os processos envolvidos para analisar e redefinir suas estratégias, aumentando seu resultado de forma rápida. Baixe este material gratuitamente.">
         <meta name="author" content="">
 
         <title>Marketing na Veia - Baixe seu Ebook sobre Growth Hacking agora!!!</title>
@@ -31,9 +31,16 @@ header("Content-type: text/html; charset=utf-8");
         <header class="ebook-landing" style="background-image: url('img/banner_landing_lo1.jpg')">
             <div class="container">
                 <div class="row">
+                    <div class="col cols-md-4"></div>
+                    <div class="col cols-md-4" align="center" style="margin-bottom:50px;">
+                        <img src="img/logo_mktnaveia_branco.png"></img>
+                        </div>
+                    <div class="col cols-md-4"></div>
+                </div>
+                <div class="row">
                     <div class="col col-md-2"></div>
                     <div class="col col-md-6">
-                <h1> Baixe agora o Ebook agora: </h1>
+                <h1> Baixe o Ebook agora: </h1>
                 <h2> GROWTH HACKING: O que é e como aplica na minha estratégia</h2>
                 </div>
             </div> 
@@ -44,7 +51,7 @@ header("Content-type: text/html; charset=utf-8");
                 <div id="ebook-agradecimento" style="display: none; text-align:center;">
                 <p>EBOOK ENVIADO PARA SEU E-MAIL!</p>
                 <br>
-                <p>Confira no seu e-mail o link para download do Ebook. (BOLD tamanho 20)</p>
+                <p>Confira no seu e-mail o link para download do Ebook.</p>
                 <br>
                 <p style="font-weight:regular; font-size:12px;">Caso não veja o e-mail na sua caixa de entrada, confira se não está na caixa de spam ou promoções.</p>
                 <hr style="border-width:1px; border-color:#6afac5;">
@@ -59,12 +66,12 @@ header("Content-type: text/html; charset=utf-8");
             <div class="container">
                 <div class="row">
                     <div class="col col-md-2"></div>
-                    <div class="col col-md-6" style="font-weight:bold; font-size:14px; color:#000;">
+                    <div class="col col-md-6" style="font-size:16px; color:#000;">
                         <img src="img/mockup_ebook.jpg"></img>
                         <p>
-                            <b>Growth Hacking: aprenda como encontrar e explorar brechas para o crescimento da sua empresa.</b> 
+                            Growth Hacking: aprenda como encontrar e explorar brechas para o crescimento da sua empresa.
                         </p>
-                        <p>Se você quer entender mais sobre os processos envolvidos para analisar e redefinir suas estratégias, aumentando seu resultado de forma rápida. Baixe este material gratuitamente.
+                        <p>Se você quer entender mais sobre os processos envolvidos para analisar e redefinir suas estratégias, aumentando seu resultado de forma rápida, baixe este material gratuitamente
                         </p>
                         <p>O Marketing na Veia é o seu novo canal para doses diárias de Marketing Digital!
                             Neste Ebook você aprenderá mais sobre:
