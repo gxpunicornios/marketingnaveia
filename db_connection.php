@@ -23,8 +23,7 @@ class DbConnect {
 		$this->conn->close();
 	}
 
-	function insertUserData($user_name, $user_email, $user_age, $user_schoolarship, $user_ip){
-
+	function insertUserData($user_name, $user_email, $user_age, $user_schoolarship,$user_interest, $user_ip){
 		if($user_name === "" || $user_email === "" || $user_age === "" || $user_schoolarship === "" || $user_ip === "") {
 			return 1; // field is required;
 		}
@@ -35,7 +34,7 @@ class DbConnect {
 
 
 		$date = date('Y-m-d H:i:s');
-		$sql = "INSERT INTO user VALUES (DEFAULT,'$user_name','$user_email','$user_age','$user_schoolarship','$user_ip','$date')";
+		$sql = "INSERT INTO user VALUES (DEFAULT,'$user_name','$user_email','$user_age','$user_schoolarship','$user_interest','$user_ip','$date')";
 
 		if ($this->conn->query($sql) === TRUE) {
 		    return 0; // successfull added

@@ -229,6 +229,7 @@ footer i.fa-facebook{
     border-collapse: separate;
 }
 
+
 @media (max-width: 600px) {
   header.intro-header{
     height: 600px;
@@ -252,4 +253,69 @@ footer i.fa-facebook{
     margin-left: 4.5%;
     margin-right: 4.5%;
   }
+}
+
+#ebook-cbox {
+    margin-top: -100px;
+    font-family:'Roboto', sans-serif;
+    right:50px;
+    background-color: #512772;
+    color: #fff;
+    width: 350px;
+    height: 350px;
+    z-index: 999;
+    padding: 10px 10px 10px 10px;
+}
+#ebook-cbox p {
+    color: #fff;
+    font-weight: bold;
+}
+#ebook-cbox span {
+    color: #fff;
+    font-size: 10px;
+}
+
+#landing-content #ebook p {
+    color:#fff;
+}
+
+#ebook-cbox .submit {
+    border-size: 0px;
+    border-radius: 0px;
+    background-color: #6afac5;
+    color: #512772;
+}
+
+.ebook-landing{
+    height: 450px;
+    background: center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    margin-bottom: 0px;
+}
+
+.ebook-landing h1 {
+    font-family:'Roboto', sans-serif !important;
+    color: #fff;
+    margin-top: 0;
+    font-size: 50px;
+}
+.ebook-landing h2 {
+    font-family:'Roboto', sans-serif !important;
+    color: #fff;
+    margin-top: 0;
+    font-size: 36px;
+}
+
+#landing-content p{
+    color:#000;
+    font-size: 16px;
+}
+
+footer hr{
+    width: 100%;
+    max-width: 100%;
+    border-width:2px;
 }
