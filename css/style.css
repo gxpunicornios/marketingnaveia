@@ -130,6 +130,7 @@ a{
     height: 150px;
     background: url(../img/logo.png) no-repeat;
     background-position-y: 10px;
+    margin-left: 10px;
 }
 
 #cadastro-full{
@@ -244,5 +245,11 @@ footer i.fa-facebook{
       width: 125px;
       height: 100px;
       margin-left: 10px;
+  }
+
+  footer i{
+    width: 15%;
+    margin-left: 4.5%;
+    margin-right: 4.5%;
   }
 }
