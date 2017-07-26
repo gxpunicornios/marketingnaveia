@@ -1,4 +1,5 @@
 <footer>
+      <hr>
       <div class="container">
         <div class="row">
           <div class="col-md-4"></div>
@@ -7,11 +8,10 @@
             <a href="https://twitter.com/mktnaveiablog" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
             <a href="https://www.linkedin.com/company-beta/24972376/" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
           </div>
-          <div class="col-md-4"></div>
         </div>
           <div class="row">
               <div class="col-lg-12">
-                <p class="copyright text-muted text-center">Copyright &copy; Your Website 2016</p>
+                <p class="copyright text-muted text-center">Copyright &copy; Unicórnios 2017</p>
               </div>
           </div>
       </div>

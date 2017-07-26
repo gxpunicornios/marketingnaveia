@@ -6,6 +6,8 @@ $(document).ready(function(){
         var ip = response.ip;
         $('#cadastro #register').append($('<input type="text" class="user-ip" name="ip" value="'+ip+'" hidden>'));
         $('#cadastro-full #register').append($('<input type="text" class="user-ip" name="ip" value="'+ip+'" hidden>'));
+        $('#ebook-cbox #ebook').append($('<input type="text" class="user-ip" name="ip" value="'+ip+'" hidden>'));
+        $('#cadastro-full #ebook').append($('<input type="text" class="user-ip" name="ip" value="'+ip+'" hidden>'));
         }, "jsonp");
 
     
@@ -27,12 +29,16 @@ $(document).ready(function(){
 
     function showCadastrarBox(){
         $('#cadastro').css('display','block');
+        $('#ebook-cbox').css('display','block');
         $('#cadastro-full').css('display','none');
+        $('#landing-content').css('margin-top','-200px');
     }
 
     function showCadastrarFullSection(){
         $('#cadastro').css('display','none');
         $('#cadastro-full').css('display','block');
+        $('#ebook-cbox').css('display','none');
+        $('#landing-content').css('margin-top','0px');
     }
 
 
@@ -79,9 +85,19 @@ $(document).ready(function(){
           // Log a message to the console
           //var obj = JSON.parse(response);
           var result = response.result;
+          console.log(response);
           if(result === 0){
-              $("#register .alert").attr( "class", "alert alert-success" );
-              $("#register .alert").html("<b>Sucesso!</b> Obrigado por se cadastrar");
+              if(response.type === "ebook"){
+                console.log("oi");
+                    $('#ebook-cbox #ebook-agradecimento').css('display','block');
+                    $('#ebook-cbox #ebook').css('display','none');
+                    $('#cadastro-full #ebook-agradecimento').css('display','block');
+                    $('#cadastro-full #ebook').css('display','none');
+              }
+              else{
+                   $("#register .alert").attr( "class", "alert alert-success" );
+                   $("#register .alert").html("<b>Sucesso!</b> Obrigado por se cadastrar");
+              }
           }
           else if(result === 2){
               $("#register .alert").attr( "class", "alert alert-danger" );
@@ -113,6 +129,8 @@ $(document).ready(function(){
   // Bind to the submit event of our form
   $("#cadastro #register").submit(register);
   $("#cadastro-full #register").submit(register);
+  $("#cadastro-full #ebook").submit(register);
+  $("#ebook-cbox #ebook").submit(register);
     // Select all links with hashes
     $('a[href*="#"]')
     // Remove links that don't actually link to anything

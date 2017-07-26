@@ -13,8 +13,14 @@ class RegisterForm {
                 break;
             case 'ebook':
                 $this->labelInit = "Preencha os campos indicados para receber seu Ebook gratuíto!";
-                $this->submitText = "Fazer Download";
+                $this->submitText = "Quero Receber";
                 $this->actionId = "ebook";
+                break;
+            case 'cadastro':
+                $this->labelInit = "Nosso objetivo é trazer tudo que pode ajudar você a se tornar o melhor profissional marketing digital para obter resultados concretos, sem achismos ou preconceitos. Vamos juntos?";
+                $this->submitText = "EU QUERO!";
+                $this->actionId = "register";
+                break;
         }
 
         echo '
@@ -48,9 +54,8 @@ class RegisterForm {
         </select>
       </div>
        <div class="input-group">
-        <!--<input class="form-control" type="text" name="idade" placeholder="Idade" required>-->
         <select class="form-control" name="interesse" required>
-            <option value="" disabled selected>Qual sua área de maio interesse?</option>
+            <option value="" disabled selected>Qual sua área de interesse?</option>
             <option value="1">Inbound Marketing</option>
             <option value="2">SEO/SEM</option>
             <option value="3">Data Metrics</option>
@@ -59,6 +64,7 @@ class RegisterForm {
         </select>
       </div>
       <span>Preencha todos os campos!</span>
+      <input type="text" name="ebook" value="'.($this->actionId === "ebook" ? 1 : 0).'" hidden>
       <input type="submit" class="form-control submit" value="'.$this->submitText.'">
       <p></p>
       <div class="alert none">
