@@ -5,6 +5,12 @@ include 'form-register.php';
 setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
 date_default_timezone_set('America/Sao_Paulo');
 header("Content-type: text/html; charset=utf-8");
+
+
+$db = new DbConnect();
+$db->open();
+
+$result = $db->getLp($_GET['id']);
 ?>
 <html lang="pt" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
 
@@ -40,14 +46,14 @@ header("Content-type: text/html; charset=utf-8");
                 <div class="row">
                     <div class="col col-md-2"></div>
                     <div class="col col-md-6">
-                <h1> Baixe agora o ebook! </h1>
-                <h2> GROWTH HACKING: O que é e como aplicar na minha estratégia</h2>
+                <h1> <?php echo $result['lp_h1']; ?> </h1>
+                <h2> <?php echo $result['lp_h2']; ?></h2>
                 </div>
             </div> 
         </header>
 
         <section id="cadastro-full" style="display: none;">
-            <?php new RegisterForm('ebook'); ?>
+            <?php new RegisterForm('ebook',$result['lp_link']); ?>
                 <div id="ebook-agradecimento" style="display: none; text-align:center;">
                 <p>EBOOK ENVIADO PARA SEU E-MAIL!</p>
                 <br>
@@ -67,28 +73,12 @@ header("Content-type: text/html; charset=utf-8");
                 <div class="row">
                     <div class="col col-md-2"></div>
                     <div class="col col-md-6" style="font-size:16px; color:#000;">
-                        <img src="img/mockup_ebook.jpg"></img>
-                        <p>
-                            Growth Hacking: aprenda como encontrar e explorar brechas para o crescimento da sua empresa.
-                        </p>
-                        <p>Se você quer entender mais sobre os processos envolvidos para analisar e redefinir suas estratégias, aumentando seu resultado de forma rápida, baixe este material gratuitamente
-                        </p>
-                        <p>O Marketing na Veia é o seu novo canal para doses diárias de Marketing Digital!
-                            Neste Ebook você aprenderá mais sobre:
-                        </p>
-                        <li>
-                             Growth Hacking
-                        </li>
-                        <li>
-                            Funil AARRR 
-                        </li>
-                        <li>
-                             Teste e mensuração de hipóteses
-                        </li>
+                        <img src="<?php echo $result['lp_image']; ?>"></img>
+                        <?php echo $result['lp_text'];?>
                     </div>    
                     <div class="col col-md-4">
                         <div id="ebook-cbox" style="margin-left: 50px;">
-                            <?php new RegisterForm('ebook'); ?>
+                            <?php new RegisterForm('ebook',$result['lp_link']); ?>
                             <div id="ebook-agradecimento" style="display: none; text-align:center; color:#fff;">
                                 <p style="color:#fff;">EBOOK ENVIADO PARA SEU E-MAIL!</p>
                                 <br>
@@ -111,3 +101,9 @@ header("Content-type: text/html; charset=utf-8");
         <?php include 'footer.php' ?>
     </body>
 </html>
+
+<?php 
+
+$db->close();
+
+?>

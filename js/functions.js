@@ -24,6 +24,7 @@ $(document).ready(function(){
             $('.navbar-default .navbar-nav li a:hover').css('color','#a1facb');
             showCadastrarBox();
         }
+
     }
     setInterval(update,60/1000);
 
@@ -49,7 +50,14 @@ $(document).ready(function(){
   var request;
 
   function register(event){
-      
+
+
+    var regName = new RegExp("(\\w+)(\\s+)(\\w+)");
+    if(!regName.test($(this).find('input[name="nome"]').val())){
+      event.preventDefault();
+      request.abort();
+    }
+
       // Prevent default posting of form - put here to work in case of errors
       event.preventDefault();
 
@@ -131,6 +139,24 @@ $(document).ready(function(){
   $("#cadastro-full #register").submit(register);
   $("#cadastro-full #ebook").submit(register);
   $("#ebook-cbox #ebook").submit(register);
+
+
+  $('input[name="nome"]').on('blur',function(event){
+    var regName = new RegExp("(\\w+)(\\s+)(\\w+)");
+    if(!regName.test($(this).val())){
+      // $(this).prop({required : true});
+      $(this).addClass('form-control-danger').css('border-color','red');
+      // event.target.setCustomValidity('Insira seu nome e sobrenome');
+      //  if ($(this).is(':invalid')) {
+      //     $(this).addClass('invalid');              
+      //   } else {
+      //       $(this).removeClass('invalid'); 
+      //   }
+    }
+    else{
+      $(this).addClass('form-control-danger').css('border-color','#fff');
+    }
+  })
     // Select all links with hashes
     $('a[href*="#"]')
     // Remove links that don't actually link to anything
@@ -167,4 +193,6 @@ $(document).ready(function(){
                 }
             }
         });
+
+
 });

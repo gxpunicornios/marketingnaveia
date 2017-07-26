@@ -3,7 +3,7 @@ include 'db_connection.php';
 require 'mailer/PHPMailerAutoload.php';
 
 $output = "";
-$typeOut = $_POST["ebook"] === "1" ? "ebook" : "register";
+$typeOut = $_POST["ebook"] != "" ? "ebook" : "register";
 $ip = $_POST["ip"];
 if(empty($ip)){
     $ip = "UNKNOW";
@@ -15,13 +15,13 @@ $db = new DbConnect();
 $db->open();
 $output = $db->insertUserData($_POST["nome"], $_POST["email"], $_POST["idade"], $_POST["escolaridade"],$_POST["interesse"], $ip);
 
-if(($output === 0 || $output === 2) && $_POST["ebook"] === "1"){
+if(($output === 0 || $output === 2) && $_POST["ebook"] != ""){
     $ebookText = 'Olá '.$_POST["nome"].',
 <br><br>
-Obrigado por se interessar no "Growth Hacking: o que é e como aplicar na minha estratégia". Tenho certeza de que você vai aprender muito com este material.
+Obrigado por se interessar no nosso ebook! Tenho certeza de que você vai aprender muito com este material.
 No link abaixo, você pode acessar e fazer download do material quando quiser.
 <br><br>
-https://goo.gl/LmVgRx
+'.$_POST['ebook'].'
 <br> <br>
 Um abraço,
 Equipe Marketing na Veia';

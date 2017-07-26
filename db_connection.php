@@ -79,6 +79,18 @@ class DbConnect {
 
 		return null;
 	}
+
+	function getLp($id){
+		if(!isset($id)){
+			return false;
+		}
+
+		$sql = "SELECT * FROM lp where lp_id = $id";
+		$result = $this->conn->query($sql);
+		if($result->num_rows > 0){
+			return mysqli_fetch_array($result);
+		}
+	}
 } 
 
 // $db = new DbConnect();

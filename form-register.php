@@ -1,10 +1,11 @@
 <?php 
 
 class RegisterForm {
+    private $urlEbook = "";
     private $submitText = "";
     private $labelInit = "";
     private $actionId = "";
-    function __construct($type) {
+    function __construct($type, $urlEbook = "") {
         switch($type){
             case 'register':
                 $this->labelInit = "Todo dia um conteúdo exclusivo sobre Marketing Digital. Vai perder essa oportunidade?";
@@ -15,6 +16,7 @@ class RegisterForm {
                 $this->labelInit = "Preencha os campos indicados para receber seu Ebook gratuíto!";
                 $this->submitText = "Quero Receber";
                 $this->actionId = "ebook";
+                $this->urlEbook = $urlEbook;
                 break;
             case 'cadastro':
                 $this->labelInit = "Nosso objetivo é trazer tudo que pode ajudar você a se tornar o melhor profissional marketing digital para obter resultados concretos, sem achismos ou preconceitos. Vamos juntos?";
@@ -23,7 +25,7 @@ class RegisterForm {
                 break;
         }
 
-        echo '
+      echo '
         <form id="'.$this->actionId.'" method="post">
       <p>'.$this->labelInit.'
         <br><span>Fique tranquilo, não vamos mandar spam</span>
@@ -64,7 +66,7 @@ class RegisterForm {
         </select>
       </div>
       <span>Preencha todos os campos!</span>
-      <input type="text" name="ebook" value="'.($this->actionId === "ebook" ? 1 : 0).'" hidden>
+      <input type="text" name="ebook" value="'.($this->urlEbook === "" ? "" : $this->urlEbook).'" hidden>
       <input type="submit" class="form-control submit" value="'.$this->submitText.'">
       <p></p>
       <div class="alert none">
