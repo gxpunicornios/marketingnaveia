@@ -10,7 +10,12 @@ header("Content-type: text/html; charset=utf-8");
 $db = new DbConnect();
 $db->open();
 
-$result = $db->getLp($_GET['id']);
+$id = "";
+if(!isset($_GET['id'])|| empty($_GET['id'])){
+$id = 1;
+}
+
+$result = $db->getLp($id);
 ?>
 <html lang="pt" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
 
@@ -21,7 +26,7 @@ $result = $db->getLp($_GET['id']);
         <meta name="description" content="Se você quer entender mais sobre os processos envolvidos para analisar e redefinir suas estratégias, aumentando seu resultado de forma rápida. Baixe este material gratuitamente.">
         <meta name="author" content="">
 
-        <title>Marketing na Veia - Baixe seu Ebook sobre Growth Hacking agora!!!</title>
+        <title>Marketing na Veia - Baixe seu Ebook agora!!!</title>
 
         <!-- Bootstrap Core CSS -->
         <!--<link href="lib/css/bootstrap.min.css" rel="stylesheet">-->
