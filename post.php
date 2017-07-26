@@ -25,10 +25,11 @@ $post = $db->getPost($id);
   <!--<link href="lib/css/bootstrap.min.css" rel="stylesheet">-->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!--<link href="lib/css/bootstrap-theme.min.css" rel="stylesheet">-->
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <link rel="shortcut icon" href="img/img_thumb.png" type="image/x-png">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+  <link href="css/posts.css" rel="stylesheet">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
 </head>
 <?php include_once("analyticstracking.php") ?>
