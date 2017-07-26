@@ -58,6 +58,22 @@ class DbConnect {
 		}
 	}
 
+	function authenticate($username, $pw){
+		
+		if(!isset($username))
+			return false;
+
+
+		$sql = "SELECT * FROM admin WHERE admin_username = '$username' AND admin_password = '$pw'";
+		$result = $this->conn->query($sql);
+		if($result->num_rows > 0){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+
 	function getPost($id){
 		if(!isset($id)){
 			return false;
@@ -114,6 +130,54 @@ class DbConnect {
 		}
 
 		return null;
+	}
+
+	function deleteUser($id){
+		if(!isset($id)){
+			return 1;
+		}
+
+		$sql = "DELETE FROM user WHERE user_id = ".$id;
+		if ($this->conn->query($sql) === TRUE) {
+		    return 0; // successfull added
+		} else {
+			echo "Error: " . $sql . "<br>" . $this->conn->error;
+			return 3; //unexpected error;
+		    
+		}	
+	}
+
+	function insertPost($post_title, $post_subtitle, $post_description, $post_author){
+
+		if($post_title === "" || $post_subtitle === "" || $post_description === "" || $post_author === ""){
+			return 1;
+		}
+
+		$date = date('Y-m-d H:i:s');
+		$sql = "INSERT INTO post VALUES (DEFAULT,'$post_title','$post_subtitle','$post_description','$post_author','$date')";
+
+		if ($this->conn->query($sql) === TRUE) {
+		    return 0; // successfull added
+		} else {
+			echo "Error: " . $sql . "<br>" . $this->conn->error;
+			return 3; //unexpected error;
+		    
+		}	
+	}
+
+	function deletePost($id){
+		if(!isset($id)){
+			return 1;
+		}
+
+		$sql = "DELETE FROM post WHERE post_id = ".$id;
+		if ($this->conn->query($sql) === TRUE) {
+		    return 0; // successfull added
+		} else {
+			echo "Error: " . $sql . "<br>" . $this->conn->error;
+			return 3; //unexpected error;
+		    
+		}	
 	}
 } 
 
