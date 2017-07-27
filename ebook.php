@@ -27,10 +27,10 @@ if($result != null){
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Se você quer entender mais sobre os processos envolvidos para analisar e redefinir suas estratégias, aumentando seu resultado de forma rápida. Baixe este material gratuitamente.">
+        <meta name="description" content="<?php echo $result['lp_meta']?>">
         <meta name="author" content="">
 
-        <title>Marketing na Veia - Baixe seu ebook agora!!!</title>
+        <title>Marketing na Veia - <?php echo $result['lp_title'] ?></title>
 
         <!-- Bootstrap Core CSS -->
         <!--<link href="lib/css/bootstrap.min.css" rel="stylesheet">-->
@@ -82,9 +82,8 @@ if($result != null){
                 <div class="row">
                     <div class="col col-md-2"></div>
                     <div class="col col-md-6" style="font-size:16px; color:#000;">
-                        <img src="<?php echo $result['lp_image']; ?>"></img>
-                        <?php echo $result['lp_text'];?>
-                    </div>    
+                        <img style="max-width: 500px; max-height: 336px;" src="<?php echo $result['lp_image']; ?>"></img>
+                    </div> 
                     <div class="col col-md-4">
                         <div id="ebook-cbox" style="margin-left: 50px;">
                             <?php new RegisterForm('ebook',$result['lp_link']); ?>
@@ -96,12 +95,20 @@ if($result != null){
                                 <p style="color:#fff; font-weight:regular; font-size:12px;">Caso não veja o e-mail na sua caixa de entrada, confira se não está na caixa de spam ou promoções.</p>
                                 <hr style="border-width:1px; border-color:#6afac5;">
 
-                                <p style="color:#fff;">Nosso Blog diariamente tem conteúdos novos e exclusivos sobre Marketing Digital.<p>
+                                <p style="color:#fff;">Nosso Blog diariamente tem conteúdos novos e exclusivos sobre Marketing Digital.</p>
                                 <p style="text-align:center;color:#fff;">Vai perder essa oportunidade?</p>
                                 
                                 <center><button onclick="location.href = '/';" type="button" class="btn btn-default" style="width: 100%;font-weight: bold;color: #512772;background-color: #6afac5;border-width: 0px;border-radius: 0px;height: 34px">ACESSE O BLOG</button></center>   
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-md-2"></div>
+                    <div class="col col-md-6">
+                        
+                    <?php echo $result['lp_text'];?>
+                        
                     </div>
                 </div>
             </div>
