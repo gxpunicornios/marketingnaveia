@@ -84,22 +84,27 @@ a{
     background-color: #6afac5;
     color: #512772;
     font-weight: bold;
+    margin-top: 20px;
 }
 
-#cadastro{
-    margin-top:-200px;
-    margin-bottom:200px;
+#cta{
+    margin-top:-100px;
+    margin-bottom:60px;
+}
+
+#cta p.medida{
+    height: 100px;
 }
 
 #cadastro-box{
     font-family:'Roboto', sans-serif;
-    right:50px;
+    right:30px;
     position: fixed;
     background-color: #512772;
     color: #fff;
     width: 250px;
-    height: 350px;
-    z-index: 999;
+    height: 180px;
+    z-index: 998;
     padding: 10px 10px 10px 10px;
 }
 
@@ -118,6 +123,10 @@ a{
     background-color: #6afac5;
     color: #512772;
     font-weight: bold;
+    position: fixed;
+    z-index: 999;
+    width: 230px;
+    margin-top: 20px;
 }
 #logo{
     margin-bottom: -100px;
@@ -186,6 +195,7 @@ footer i.fa-facebook{
 
 .teste{
   color: white;
+  font-family: 'Libre Franklin', sans-serif;
 }
 
 #blog-text{
@@ -221,6 +231,7 @@ footer i.fa-facebook{
 .navbar-default .navbar-nav li a{
     font-family: "Roboto", sans-serif;
     font-weight: bold;
+    font-size: 14px;
 }
 
 .navbar-default .navbar-toggle {
@@ -241,10 +252,10 @@ footer i.fa-facebook{
     border-collapse: separate;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   header.intro-header{
     height: 600px;
-    background-image: url('../img/homemobile_lo1.png');
+    background-image: url('../img/homemobile_lo2.png');
     margin: 0;
     background-position: -270px 0px;
   }
