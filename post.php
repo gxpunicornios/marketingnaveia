@@ -38,7 +38,7 @@ $post = $db->getPost($id);
 $banner = !empty($post['post_banner']) ? $post['post_banner'] : "banner-post.png";
 ?>
 <body>
-    <header class="intro-header" style="background-image: url('img/<?php echo $banner ?>)'">
+    <header class="intro-header" style="background-image: url('img/<?php echo $banner ?>')">
         <?php include 'navbar.php'; ?>
         <div id="blog-head" class="site-heading container align-items-center">
             <div class="post-title" style="font-size:50px;color:white;font-weight:bold;"><?php echo $post['post_title']; ?></div>
