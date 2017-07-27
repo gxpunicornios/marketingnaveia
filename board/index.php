@@ -106,7 +106,7 @@ if(isset($_GET["export"])){
 </head>
 <body>
 
-<div class="container"><h2>Example 3 </h2></div>
+<div class="container"><h2>Board</h2></div>
 <div id="exTab3" class="container"> 
 <ul  class="nav nav-pills">
       <li class="active">
