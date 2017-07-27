@@ -69,7 +69,7 @@ if($post["post_lp_id"] > 0){
                 <center>
                 <p style="margin-bottom: 25px; text-align: center">Baixe AGORA o ebook!!</p>
                 <p> <?php echo $result['lp_h2']?></p>
-                <button onclick="location.href = 'ebook.php?id=<?php echo $post['post_lp_id']?>'" type="button" class="btn btn-default" style="width: 100%;font-weight: bold;color: #512772;background-color: #6afac5;border-width: 0px;border-radius: 0px;height: 34px">ACESSE O BLOG</button>
+                <button onclick="location.href = 'ebook.php?id=<?php echo $post['post_lp_id']?>'" type="button" class="btn btn-default" style="width: 100%;font-weight: bold;color: #512772;background-color: #6afac5;border-width: 0px;border-radius: 0px;height: 34px">BAIXAR AGORA</button>
                 <p></p>
                 </center>
             </div>
