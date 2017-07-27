@@ -102,11 +102,11 @@ header("Content-type: text/html; charset=utf-8");
           <div class="post">
             <a href="/post.php?id=<?php echo $row['post_id']?>">
               <p class="titulo">
-                <?php echo $row['post_title'] . " " . $row['post_subtitle']?>
+                <?php echo $row['post_title'] . " " . $row['post_subtitle'];?>
               </p>
             </a>
             <h3 class="descricao">
-              <?php echo substr($row['post_description'],0,90)?>
+              <?php echo $row['post_preview']; ?>
             </h3>
             <p class="referencia">Postado por <b><?php echo $row['post_author']; ?></b> em <?php echo strftime('%A, %d de %B de %Y', strtotime($row['post_date_created'])); ?></p>
           </div>

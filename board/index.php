@@ -16,9 +16,10 @@ if(isset($_POST['post_author'])){
   $postSubtitle = $_POST['post_subtitle'];
   $postAuthor = $_POST['post_author'];
   $postText = $_POST['post_text'];
+  $postPreview = $_POST['post_preview'];
   $db = new DbConnect();
   $db->open();
-  $result = $db->insertPost($postTitle,$postSubtitle,$postText,$postAuthor);
+  $result = $db->insertPost($postTitle,$postSubtitle,$postText,$postAuthor,$postPreview);
   $db->close();
 
   if($result === 0){
@@ -213,6 +214,10 @@ if(isset($_GET["export"])){
              <div class="form-group">
                 <label for="">Autor</label>
                 <input type="text" class="form-control" name="post_author" placeholder="" required="true">
+              </div>
+              <div class="form-group">
+                <label for="">Preview do texto (que aparece na home)</label>
+                <input type="text" class="form-control" name="post_preview" placeholder="" required="true">
               </div>
               <div class="form-group">
                 <textarea name="post_text" id="post_text" required="true">Escreva o texto aqui</textarea>
