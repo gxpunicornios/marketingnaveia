@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
-	 $('textarea#post_text').froalaEditor();
+	 $('textarea#post_text').froalaEditor({
+      height: 350
+    });
 
     $('#csv-export').click(function(){
 

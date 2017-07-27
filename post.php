@@ -48,27 +48,40 @@ $banner = !empty($post['post_banner']) ? $post['post_banner'] : "banner-post.png
         </div>
     </header>
 
+<?php
 
-    <!-- <section id="cta">
+if($post["post_lp_id"] > 0){
+
+  $db = new DbConnect();
+  $db->open();
+  $result = $db->getLpTitle($post["post_lp_id"]);
+
+?>
+
+    <section id="cta">
       <div class="container">
         <div class="row">
           <div class="col col-md-4"></div>
           <div class="col col-md-4"></div>
           <div class="col col-md-4">
 
-            <div id="cadastro-box" data-spy="affix">
-              <form id="ebookcta" method="post">
-                <p class="medida">Aqui fica o texto dinâmico</p>
-                <p> </p>
-                <input type="submit" class="form-control submit" value="BAIXE AGORA">
+            <div id="cadastro-box" data-spy="affix" align="center">
+                <center>
+                <p style="margin-bottom: 25px; text-align: center">Baixe AGORA o ebook!!</p>
+                <p> <?php echo $result['lp_h2']?></p>
+                <button onclick="location.href = 'ebook.php?id=<?php echo $post['post_lp_id']?>'" type="button" class="btn btn-default" style="width: 100%;font-weight: bold;color: #512772;background-color: #6afac5;border-width: 0px;border-radius: 0px;height: 34px">ACESSE O BLOG</button>
                 <p></p>
-              </form>
+                </center>
             </div>
 
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
+<?php 
+  }
+
+?>
 
     <section id="blog-text">
         <div class="container">

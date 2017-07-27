@@ -17,9 +17,10 @@ if(isset($_POST['post_author'])){
   $postAuthor = $_POST['post_author'];
   $postText = $_POST['post_text'];
   $postPreview = $_POST['post_preview'];
+  $postLpId = $_POST['post_lp_id'];
   $db = new DbConnect();
   $db->open();
-  $result = $db->insertPost($postTitle,$postSubtitle,$postText,$postAuthor,$postPreview);
+  $result = $db->insertPost($postTitle,$postSubtitle,$postText,$postAuthor,$postPreview,$postLpId);
   $db->close();
 
   if($result === 0){
@@ -216,11 +217,30 @@ if(isset($_GET["export"])){
                 <input type="text" class="form-control" name="post_author" placeholder="" required="true">
               </div>
               <div class="form-group">
+                <label for="">Texto</label>
                 <label for="">Preview do texto (que aparece na home)</label>
                 <input type="text" class="form-control" name="post_preview" placeholder="" required="true">
               </div>
+
               <div class="form-group">
                 <textarea name="post_text" id="post_text" required="true">Escreva o texto aqui</textarea>
+              </div>
+               <div class="form-group">
+                <label for="">CTA Ebook</label>
+                <select class="form-control" name="post_lp_id" required>
+                  <option value="0">Nenhum</option>
+                  <?php 
+                  $db = new DbConnect();
+                  $db->open();
+                  $result = $db->getLps();
+                  while($row = mysqli_fetch_assoc($result)){
+                  ?>
+                  <option value="<?php echo $row['lp_id']?>"><?php echo $row['lp_h2']?></option>
+                  
+                  <?php
+                  }
+                  ?>
+                </select>
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>

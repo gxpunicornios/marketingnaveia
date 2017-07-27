@@ -96,6 +96,16 @@ class DbConnect {
 		return null;
 	}
 
+	function getLps(){
+		$sql = "SELECT * FROM lp;";
+		$result = $this->conn->query($sql);
+		if($result->num_rows > 0){
+			return $result;
+		}
+
+		return null;
+	}
+
 	function getLpById($id){
 		if(!isset($id)){
 			return null;
@@ -107,6 +117,7 @@ class DbConnect {
 			return mysqli_fetch_array($result);
 		}
 	}
+
 
 	function getLpByUri($uri){
 		if(!isset($uri)){
@@ -147,14 +158,14 @@ class DbConnect {
 		}	
 	}
 
-	function insertPost($post_title, $post_subtitle, $post_description, $post_author, $post_preview){
+	function insertPost($post_title, $post_subtitle, $post_description, $post_author, $post_preview,$post_lp_id){
 
 		if($post_title === "" || $post_subtitle === "" || $post_description === "" || $post_author === ""){
 			return 1;
 		}
 
 		$date = date('Y-m-d H:i:s');
-		$sql = "INSERT INTO post VALUES (DEFAULT,'$post_title','$post_subtitle','$post_description','$post_author','$date','','','$post_preview')";
+		$sql = "INSERT INTO post VALUES (DEFAULT,'$post_title','$post_subtitle','$post_description','$post_author','$date','','$post_lp_id','$post_preview')";
 
 		if ($this->conn->query($sql) === TRUE) {
 		    return 0; // successfull added
@@ -180,18 +191,18 @@ class DbConnect {
 		}	
 	}
 
-	function get($query){
-		if($isset($query)){
+	function getLpTitle($id){
+		if(!isset($id)){
 			return null;
 		}
 
-		$result = $this->conn->query($query);
-		if ($result->num_rows > 0) {
-			return $result;
+		$sql = "SELECT lp_h2 from lp where lp_id = ".$id;
+		$result = $this->conn->query($sql);
+		if($result->num_rows > 0){
+			return mysqli_fetch_array($result);
 		}
-		else {
-			return "Error: " . $query . "<br>" . $this->conn->error; 
-		}	
+
+		return null;
 
 	}
 } 
