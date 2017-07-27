@@ -146,12 +146,10 @@ $(document).ready(function(){
     if(!regName.test($(this).val())){
       // $(this).prop({required : true});
       $(this).addClass('form-control-danger').css('border-color','red');
-      // event.target.setCustomValidity('Insira seu nome e sobrenome');
-      //  if ($(this).is(':invalid')) {
-      //     $(this).addClass('invalid');              
-      //   } else {
-      //       $(this).removeClass('invalid'); 
-      //   }
+      $("#register .alert").attr( "class", "alert alert-danger" );
+      $("#register .alert").html("<b>Ops!</b> Insira seu nome completo!");
+      $("#ebook .alert").attr( "class", "alert alert-danger" );
+      $("#ebook .alert").html("<b>Ops!</b> Insira seu nome completo!");
     }
     else{
       $(this).addClass('form-control-danger').css('border-color','#fff');
