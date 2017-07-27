@@ -118,13 +118,27 @@ class DbConnect {
 		}
 	}
 
-
-	function getLpByUri($uri){
-		if(!isset($uri)){
+	function getPostBySeo($seo){
+		if(!isset($seo)){
 			return null;
 		}
 
-		$sql = "SELECT * FROM lp where lp_seo LIKE '".$uri."'";
+		$sql = "SELECT * FROM post where post_seo = '".$seo."'";
+		$result = $this->conn->query($sql);
+		if($result->num_rows > 0){
+			return mysqli_fetch_array($result);
+		}
+
+		return null;
+	}
+
+
+	function getLpBySeo($seo){
+		if(!isset($seo)){
+			return null;
+		}
+
+		$sql = "SELECT * FROM lp where lp_seo LIKE '".$seo."'";
 		$result = $this->conn->query($sql);
 		if($result->num_rows > 0){
 			return mysqli_fetch_array($result);

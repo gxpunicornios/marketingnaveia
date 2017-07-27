@@ -12,7 +12,12 @@ $db->open();
 
 $result = "";
 if(!isset($_GET['id']) || empty($_GET['id'])){
-    $result = $db->getLpById(1);
+    if(!isset($_GET['seo']) || empty($_GET['seo'])){
+        $result = $db->getLpById(1);
+    }
+    else{
+        $result = $db->getLpBySeo($_GET['seo']);
+    }
 }
 else
 {
@@ -24,6 +29,7 @@ if($result != null){
 <html lang="pt" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
 
     <head>
+        <base href="/" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -121,7 +127,7 @@ if($result != null){
 <?php 
 }
 else{
-    var_dump($_GET['uri']);
+    var_dump($_GET['seo']);
     echo "deu ruim";
 }
 $db->close();

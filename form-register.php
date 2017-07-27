@@ -57,7 +57,7 @@ class RegisterForm {
       </div>
        <div class="input-group">
         <select class="form-control" name="interesse" required>
-            <option value="" disabled selected>Qual sua área de interesse?</option>
+            <option value="0" disabled selected>Qual sua área de interesse?</option>
             <option value="1">Inbound Marketing</option>
             <option value="2">SEO/SEM</option>
             <option value="3">Data Metrics</option>

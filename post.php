@@ -4,16 +4,30 @@ include 'db_connection.php';
 setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
 date_default_timezone_set('America/Sao_Paulo');
 
-$id = $_GET['id'];
-
 $db = new DbConnect();
 $db->open();
 
-$post = $db->getPost($id);
+//$post = $db->getPost($id);
+
+
+$post = "";
+if(!isset($_GET['id']) || empty($_GET['id'])){
+    if(!isset($_GET['seo']) || empty($_GET['seo'])){
+        $post = $db->getLpById(1);
+    }
+    else{
+        $post = $db->getPostBySeo($_GET['seo']);
+    }
+}
+else
+{
+    $post = $db->getPost($_GET['id']);
+}
 
 ?>
 <html lang="pt">
 <head>
+  <base href="/" />
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
