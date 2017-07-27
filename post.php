@@ -33,8 +33,12 @@ $post = $db->getPost($id);
 
 </head>
 <?php include_once("analyticstracking.php") ?>
+
+<?php 
+$banner = !empty($post['post_banner']) ? $post['post_banner'] : "banner-post.png";
+?>
 <body>
-    <header class="intro-header" style="background-image: url('img/banner-post.png')">
+    <header class="intro-header" style="background-image: url('img/<?php echo $banner ?>)'">
         <?php include 'navbar.php'; ?>
         <div id="blog-head" class="site-heading container align-items-center">
             <div class="post-title" style="font-size:70px;color:white;font-weight:bold;font-family: 'Libre Franklin', sans-serif;line-height: 1;"><?php echo $post['post_title']; ?></div>
