@@ -126,11 +126,13 @@ if(isset($_GET["export"])){
           <table class="table table-striped">
             <thead>
             <tr>
+                <th>Numero</th>
                 <th>Nome</th>
                 <th>Email</th>
                 <th>Idade</th>
                 <th>Escolaridade</th>
                 <th>Interesse</th>
+                <th>IP</th>
                 <th>Deletar?</th>
             </tr>
             </thead>
@@ -143,16 +145,20 @@ if(isset($_GET["export"])){
           $result = $db->getUsers();
 
           if(!is_null($result)){
-
+            $count = 0;
             while($row = mysqli_fetch_assoc($result))
               {
+              $count++;
         ?>
             <tr>
+
+                <td class="filterable-cell"><?php echo $count ?></td>
                 <td class="filterable-cell"><?php echo $row['user_name'] ?></td>
                 <td class="filterable-cell"><?php echo $row['user_email'] ?></td>
                 <td class="filterable-cell"><?php echo $row['user_age'] ?></td>
                 <td class="filterable-cell"><?php echo $row['user_schoolarship'] ?></td>
                 <td class="filterable-cell"><?php echo $row['user_interest'] ?></td>
+                <td class="filterable-cell"><?php echo $row['user_ip'] ?></td>
                 <td class="filterable-cell"><a href="?del_user=<?php echo $row['user_id']?>"><i class="fa fa-times-circle" style="color:red;"aria-hidden="true"></i></a></td>
             </tr>
         <?php 
@@ -164,6 +170,8 @@ if(isset($_GET["export"])){
             </table>
             </div>
             <button type="button" id="csv-export" class="btn btn-default">Download CSV</button>
+            <br>
+            <label>Total: <?php echo $count; ?></label>
           </div>
           <div class="tab-pane" id="post">
             <h3>Lista dos Posts</h3>
