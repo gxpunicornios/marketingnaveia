@@ -179,7 +179,7 @@ class DbConnect {
 		}
 
 		$date = date('Y-m-d H:i:s');
-		$sql = "INSERT INTO post VALUES (DEFAULT,'$post_title','$post_subtitle','$post_description','$post_author','$date','','$post_lp_id','$post_preview')";
+		$sql = "INSERT INTO post VALUES (DEFAULT,'$post_title','$post_subtitle','$post_description','$post_author','$date','','$post_lp_id','$post_preview',''	)";
 
 		if ($this->conn->query($sql) === TRUE) {
 		    return 0; // successfull added
